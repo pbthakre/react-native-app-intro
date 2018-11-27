@@ -27,6 +27,7 @@ export const Dot = ({
 
 export const RenderDots = (index, total, props) => {
   let dots = [];
+  if(index!==0 ){
   for (let i = 0; i < total; i++) {
     dots.push(React.createElement(Dot, { 
       ...props,
@@ -35,6 +36,7 @@ export const RenderDots = (index, total, props) => {
     }));
   }
   return dots;
+}
 }
 
 export default RenderDots;
